@@ -16,7 +16,7 @@ export default {
     return {
       swiperOption: {
         pagination: '.swiper-pagination',
-        autoplay: 2500,
+        // autoplay: 2500,
         observeParents: true,
         loop: true
       },
