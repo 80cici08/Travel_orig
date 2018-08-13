@@ -2,11 +2,11 @@
   <div>
     <div class="recommend-title">热销推荐</div>
     <ul>
-      <li class="recommend-item" v-for="item in recommendList" :key=item.id>
+      <li class="recommend-item" v-for="item in list" :key=item.id>
         <img class="item-img" :src="item.imgUrl">
         <div class="item-info">
-          <p class="item-title">{{ item.imgTitle }}</p>
-          <p class="item-desc">{{ item.imgDesc }}</p>
+          <p class="item-title">{{ item.title }}</p>
+          <p class="item-desc">{{ item.desc }}</p>
           <button class="item-button">查看详情</button>
         </div>
       </li>
@@ -17,35 +17,8 @@
 <script>
 export default {
   name: 'HomeRecommend',
-  data () {
-    return {
-      recommendList: [
-        {
-          id: '0001',
-          imgUrl: 'http://img1.qunarzz.com/sight/p0/201405/23/0265195fc4b7913a758674357c3cc8f6.jpg_200x200_b58ea00b.jpg',
-          imgTitle: '北京欢乐水魔方',
-          imgDesc: '阳光、沙滩、比基尼、海浪、音乐、游乐设备，六大要素相互叠加穿插'
-        },
-        {
-          id: '0002',
-          imgUrl: 'http://img1.qunarzz.com/sight/p0/201405/23/0265195fc4b7913a758674357c3cc8f6.jpg_200x200_b58ea00b.jpg',
-          imgTitle: '北京欢乐水魔方',
-          imgDesc: '阳光、沙滩、比基尼、海浪、音乐、游乐设备，六大要素相互叠加穿插'
-        },
-        {
-          id: '0003',
-          imgUrl: 'http://img1.qunarzz.com/sight/p0/201405/23/0265195fc4b7913a758674357c3cc8f6.jpg_200x200_b58ea00b.jpg',
-          imgTitle: '北京欢乐水魔方',
-          imgDesc: '阳光、沙滩、比基尼、海浪、音乐、游乐设备，六大要素相互叠加穿插'
-        },
-        {
-          id: '0004',
-          imgUrl: 'http://img1.qunarzz.com/sight/p0/201405/23/0265195fc4b7913a758674357c3cc8f6.jpg_200x200_b58ea00b.jpg',
-          imgTitle: '北京欢乐水魔方',
-          imgDesc: '阳光、沙滩、比基尼、海浪、音乐、游乐设备，六大要素相互叠加穿插'
-        }
-      ]
-    }
+  props: {
+    list: Array
   }
 }
 </script>
